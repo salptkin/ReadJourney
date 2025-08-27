@@ -1,0 +1,25 @@
+.base {
+    position: absolute;
+    left: 14px;
+    bottom: -24px;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+@media (min-width: 768px) {
+    .base {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: -0.24px;
+        bottom: -32px;
+    }
+}
+
+.error {
+    color: #ef4444;
+}
+
+.success {
+    color: #10b981;
+}

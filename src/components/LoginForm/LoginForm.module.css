@@ -1,0 +1,153 @@
+.form {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .form {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.inputWrapperDefault {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .inputWrapperDefault {
+        margin-bottom: 32px;
+    }
+}
+
+.inputWrapperError {
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .inputWrapperError {
+        margin-bottom: 40px;
+    }
+}
+
+.passwordWrapper {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .passwordWrapper {
+        margin-bottom: 48px;
+    }
+}
+
+.inputEmail {
+    padding-left: 49px;
+    padding-right: 50px;
+}
+
+@media (min-width: 768px) {
+    .inputEmail {
+        padding-left: 53px;
+    }
+}
+
+.inputPassword {
+    padding-left: 78px;
+    padding-right: 50px;
+}
+
+@media (min-width: 768px) {
+    .inputPassword {
+        padding-left: 86px;
+    }
+}
+
+.inputError {
+    border-color: red !important;
+    padding-right: 70px;
+}
+
+@media (min-width: 768px) {
+    .inputError {
+        padding-right: 75px;
+    }
+}
+
+.inputSuccess {
+    border-color: green !important;
+    padding-right: 70px;
+}
+
+@media (min-width: 768px) {
+    .inputSuccess {
+        padding-right: 75px;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .actions {
+        gap: 20px;
+    }
+}
+
+.button {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+@media (min-width: 768px) {
+    .button {
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+
+
+.link {
+    color: #9ca3af;
+    font-size: 12px;
+    text-decoration: underline;
+    line-height: 1.17;
+    letter-spacing: -0.24px;
+    transition: color 0.35s;
+}
+
+.link:hover {
+    color: currentColor;
+}
+
+@media (min-width: 768px) {
+    .link {
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.28px;
+    }
+}

@@ -1,0 +1,158 @@
+.header {
+    padding: 11px 20px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 17px 24px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+.logoIcon {
+    fill: #f9f9f9;
+}
+
+.logoText {
+    display: none;
+    font-size: 18px;
+    font-family: "Gilroy-Bold", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.36px;
+}
+
+@media (min-width: 1024px) {
+    .logoText {
+        display: block;
+    }
+}
+
+.navDesktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navDesktop {
+        display: block;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .actions {
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .userBox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 9999px;
+    border: 1px solid #e5e5e5;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.avatarInitial {
+    font-family: "Gilroy-Bold", sans-serif;
+    line-height: 1;
+    letter-spacing: -0.32px;
+}
+
+@media (min-width: 768px) {
+    .avatarInitial {
+        line-height: 1.13;
+    }
+}
+
+.username {
+    display: none;
+    font-family: "Gilroy-Bold", sans-serif;
+    line-height: 1.13;
+    letter-spacing: -0.32px;
+}
+
+@media (min-width: 1024px) {
+    .username {
+        display: block;
+    }
+}
+
+.menuBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .menuBtn {
+        display: none;
+    }
+}
+
+.menuIcon {
+    stroke: #f9f9f9;
+}
+
+.logoutBtn {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .logoutBtn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px !important;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-size: 16px !important;
+        line-height: 1.13 !important;
+        letter-spacing: 0.32px !important;
+    }
+}

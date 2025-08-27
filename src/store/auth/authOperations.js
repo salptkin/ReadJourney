@@ -1,4 +1,3 @@
-// authOperations.js
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { clearAuthHeader, setAuthHeader } from "../../services/axiosHeader";
 import { instance } from "../../services/axiosInstance";

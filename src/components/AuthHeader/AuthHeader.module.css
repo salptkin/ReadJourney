@@ -1,0 +1,64 @@
+.logoRow {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .logoRow {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logoRow {
+        margin-bottom: 30px;
+    }
+}
+
+.logoIcon {
+    fill: #f9f9f9;
+}
+
+.logoText {
+    display: none;
+    font-size: 18px;
+    font-family: "Gilroy-Bold", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.36px;
+}
+
+@media (min-width: 768px) {
+    .logoText {
+        display: block;
+    }
+}
+
+.title {
+    font-size: 32px;
+    font-family: "Gilroy-Bold", sans-serif;
+    line-height: 1;
+    letter-spacing: 0.64px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 64px;
+        line-height: 0.94;
+        letter-spacing: 1.28px;
+        width: 100%;
+        max-width: 444px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+}
+
+.highlight {
+    color: #9ca3af;
+}
