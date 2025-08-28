@@ -1,18 +1,15 @@
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    min-height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    gap: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 @media (min-width: 768px) {
@@ -24,24 +21,17 @@
 @media (min-width: 1024px) {
     .container {
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
         gap: 16px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 }
 
 .card {
     width: 100%;
     max-width: 400px;
-    height: 500px;
+    min-height: 500px;
     padding: 20px;
     background-color: #1f1f1f;
     border-radius: 30px;
-    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,10 +40,9 @@
 
 @media (min-width: 768px) {
     .card {
-        margin-bottom: 0;
         padding: 40px 64px;
         max-width: 472px;
-        height: 600px;
+        min-height: 600px;
     }
 }
 
@@ -61,6 +50,6 @@
     .card {
         padding: 40px 64px;
         max-width: 472px;
-        height: 600px;
+        min-height: 600px;
     }
 }
