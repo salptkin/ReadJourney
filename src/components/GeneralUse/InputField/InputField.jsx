@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import PropTypes from "prop-types";
 import Icon from "../Icon/Icon";
 import styles from "./InputField.module.css";
 
@@ -10,7 +11,7 @@ const InputField = ({
   value,
   onChange,
   onBlur,
-  placeholder,
+  placeholder = "",
   inputStyles = "",
   wrapperStyles = "",
   icon = false,
@@ -65,6 +66,25 @@ const InputField = ({
       {children}
     </div>
   );
+};
+
+InputField.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  inputStyles: PropTypes.string,
+  wrapperStyles: PropTypes.string,
+  icon: PropTypes.bool,
+  showPassword: PropTypes.bool,
+  toggleShowPassword: PropTypes.func,
+  children: PropTypes.node,
+  touched: PropTypes.bool,
+  errors: PropTypes.string,
 };
 
 export default InputField;

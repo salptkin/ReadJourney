@@ -5,6 +5,7 @@ import { refreshUser } from "./store/auth/authOperations";
 
 import PageLayout from "./PageLayout/PageLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 
@@ -33,6 +34,14 @@ const App = () => {
           element={
             <PublicRoute>
               <LoginPage />
+            </PublicRoute>
+          }
+        />
+         <Route
+          path="/register"
+          element={
+            <PublicRoute>
+              <RegistrationPage />
             </PublicRoute>
           }
         />

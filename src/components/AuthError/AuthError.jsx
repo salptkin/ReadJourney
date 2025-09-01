@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import PropTypes from "prop-types";
 import styles from "./AuthError.module.css";
 
 const AuthError = ({ message, isError = true }) => {
@@ -12,6 +13,11 @@ const AuthError = ({ message, isError = true }) => {
       {message}
     </p>
   );
+};
+
+AuthError.propTypes = {
+  message: PropTypes.string.isRequired,
+  isError: PropTypes.bool,
 };
 
 export default AuthError;

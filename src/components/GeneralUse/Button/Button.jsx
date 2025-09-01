@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import PropTypes from "prop-types";
 import styles from "./Button.module.css";
 
 const Button = ({
@@ -23,6 +24,15 @@ const Button = ({
       {title}
     </button>
   );
+};
+
+Button.propTypes = {
+  type: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  primary: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 export default Button;

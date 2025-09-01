@@ -1,0 +1,170 @@
+/* Form container (md:w-[472px]) */
+.form {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form {
+        width: 472px;
+    }
+}
+
+/* Wrapper spacing for name & email */
+.inputWrapperDefault {
+    margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .inputWrapperDefault {
+        margin-bottom: 14px;
+    }
+}
+
+.inputWrapperError {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .inputWrapperError {
+        margin-bottom: 30px;
+    }
+}
+
+/* Password wrapper: md:mb-[82px], base: mb-[32px] */
+.passwordWrapper {
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .passwordWrapper {
+        margin-bottom: 82px;
+    }
+}
+
+/* Input paddings */
+.inputName {
+    padding-left: 59px;
+    padding-right: 50px;
+}
+
+@media (min-width: 768px) {
+    .inputName {
+        padding-left: 65px;
+    }
+}
+
+.inputEmail {
+    padding-left: 49px;
+    padding-right: 50px;
+}
+
+@media (min-width: 768px) {
+    .inputEmail {
+        padding-left: 53px;
+    }
+}
+
+.inputPassword {
+    padding-left: 78px;
+    padding-right: 50px;
+}
+
+@media (min-width: 768px) {
+    .inputPassword {
+        padding-left: 86px;
+    }
+}
+
+/* Validation states (email/name) */
+.inputError {
+    border-color: red !important;
+}
+
+.inputSuccess {
+    border-color: green !important;
+}
+
+/* Validation + extra right padding (password) */
+.inputErrorWithPad {
+    border-color: red !important;
+    padding-right: 70px;
+}
+
+@media (min-width: 768px) {
+    .inputErrorWithPad {
+        padding-right: 75px;
+    }
+}
+
+.inputSuccessWithPad {
+    border-color: green !important;
+    padding-right: 70px;
+}
+
+@media (min-width: 768px) {
+    .inputSuccessWithPad {
+        padding-right: 75px;
+    }
+}
+
+/* Actions row */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .actions {
+        gap: 20px;
+    }
+}
+
+/* Button spacing */
+.button {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+@media (min-width: 768px) {
+    .button {
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+
+/* Link */
+.link {
+    color: #9ca3af;
+    /* text-grey */
+    font-size: 12px;
+    text-decoration: underline;
+    line-height: 1.17;
+    letter-spacing: -0.24px;
+    transition: color 0.35s;
+}
+
+.link:hover {
+    color: currentColor;
+}
+
+@media (min-width: 768px) {
+    .link {
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.28px;
+    }
+}

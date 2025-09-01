@@ -19,12 +19,11 @@ export const handleRejected = (state, action) => {
 export const handleAxiosError = (error) => {
   if (axios.isAxiosError && axios.isAxiosError(error)) {
     return (
-      error.response?.data?.message || {
-        message: "Something went wrong, please try again!",
-      }
+      error.response?.data?.message || 
+      "Something went wrong, please try again!"
     );
   }
-  return { message: "An error occurred" };
+  return "An error occurred";
 };
 
 export const handleUserData = (state, action) => {
