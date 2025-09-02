@@ -1,0 +1,73 @@
+.form {
+    margin-bottom: 20px;
+    flex: 1 1 auto;
+}
+
+@media (min-width: 768px) {
+    .form {
+        margin-bottom: 0;
+    }
+}
+
+.helper {
+    margin-bottom: 8px;
+    margin-left: 14px;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+@media (min-width: 768px) {
+    .helper {
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.28px;
+    }
+}
+
+.titleInput {
+    padding-left: 77px;
+    padding-right: 14px;
+}
+
+@media (min-width: 768px) {
+    .titleInput {
+        padding-left: 86px;
+    }
+}
+
+.titleWrapper {
+    margin-bottom: 8px;
+}
+
+.authorInput {
+    padding-left: 85px;
+    padding-right: 14px;
+}
+
+@media (min-width: 768px) {
+    .authorInput {
+        padding-left: 95px;
+    }
+}
+
+.authorWrapper {
+    margin-bottom: 20px;
+}
+
+.submitBtn {
+    height: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+    .submitBtn {
+        height: 42px;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-size: 16px;
+        line-height: 1.13;
+        letter-spacing: 0.32px;
+    }
+}

@@ -6,6 +6,7 @@ import { refreshUser } from "./store/auth/authOperations";
 import PageLayout from "./PageLayout/PageLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
+import HomePage from "./pages/HomePage/HomePage"
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 
@@ -24,7 +25,7 @@ const App = () => {
             index
             element={
               <PrivateRoute>
-                
+                <HomePage />
               </PrivateRoute>
             }
           />

@@ -18,14 +18,10 @@
     }
 }
 
-/* Primary style */
 .primary {
     border-color: transparent;
     background-color: #f9f9f9;
-    /* bg-light-white */
     color: #1f1f1f;
-    /* text-light-dark */
-
     transition: background-color 0.35s, color 0.35s, border-color 0.35s;
 }
 
@@ -33,13 +29,23 @@
     background-color: transparent;
     color: currentColor;
     border-color: #e5e5e5;
-    /* border-grey-20 */
 }
 
-/* Secondary style */
+.primary:disabled {
+    background-color: #9ca3af;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.primary:disabled:hover {
+    background-color: #9ca3af;
+    color: #6b7280;
+    border-color: transparent;
+}
+
 .secondary {
     border-color: #e5e5e5;
-    /* border-grey-20 */
     background-color: transparent;
     color: currentColor;
 
@@ -48,8 +54,6 @@
 
 .secondary:hover {
     background-color: #f9f9f9;
-    /* bg-light-white */
     border-color: transparent;
     color: #1f1f1f;
-    /* text-light-dark */
 }

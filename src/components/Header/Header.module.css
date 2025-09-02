@@ -12,6 +12,8 @@
     .header {
         padding: 17px 24px;
         margin-bottom: 16px;
+        justify-content: space-between;
+        gap: 20px;
     }
 }
 
@@ -19,6 +21,7 @@
     .header {
         padding-left: 16px;
         padding-right: 16px;
+        gap: 40px;
     }
 }
 
@@ -41,6 +44,7 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.36px;
+    color: #F9F9F9;
 }
 
 @media (min-width: 1024px) {
@@ -63,11 +67,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: auto;
 }
 
 @media (min-width: 768px) {
     .actions {
         gap: 16px;
+        margin-left: 0;
     }
 }
 
@@ -139,6 +145,17 @@
     stroke: #f9f9f9;
 }
 
+.mobileMenuWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .mobileMenuWrapper {
+        display: none;
+    }
+}
+
 .logoutBtn {
     display: none;
 }
@@ -148,11 +165,11 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height: 42px !important;
+        height: 42px;
         padding-left: 28px;
         padding-right: 28px;
-        font-size: 16px !important;
-        line-height: 1.13 !important;
-        letter-spacing: 0.32px !important;
+        font-size: 16px; 
+        line-height: 1.13; 
+        letter-spacing: 0.32px; 
     }
 }

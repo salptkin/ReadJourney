@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import { registerValidation } from "../../utils/schemas/authValidation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { register as registerThunk } from "../../store/auth/authOperations";
 
 import toast from "react-hot-toast";
@@ -16,6 +16,8 @@ import styles from "./RegistrationForm.module.css"
 const RegistrationForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { isLoading, isLoggedIn } = useSelector((state) => state.auth);
 
   const toggleShowPassword = () => setShowPassword((prev) => !prev);
 
@@ -26,11 +28,17 @@ const RegistrationForm = () => {
       onSubmit={
         async ({ name, email, password }, { resetForm }) => {
           if (!name.trim() || !email.trim() || !password.trim()) return;
-
+          
           try {
-            await dispatch(registerThunk({ name, email, password })).unwrap();
+            const result = await dispatch(registerThunk({ name, email, password })).unwrap();
+            toast.success("Registration successful! Welcome to ReadJourney!");
             resetForm();
+            // Başarılı kayıt sonrası login sayfasına yönlendir
+            setTimeout(() => {
+              navigate("/login");
+            }, 1500);
           } catch (error) {
+            console.error("Registration failed:", error);
             const msg =
               (typeof error === "string" && error) ||
               error?.message ||
@@ -142,10 +150,11 @@ const RegistrationForm = () => {
           <div className={styles.actions}>
             <Button
               type="submit"
-              title="Registration"
+              title={isLoading ? "Registering..." : "Registration"}
               className={styles.button}
               primary={true}
               onClick={() => {}}
+              disabled={isLoading}
             />
             <Link to="/login" className={styles.link}>
               Already have an account?

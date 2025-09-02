@@ -60,11 +60,13 @@ const Header = () => {
         />
       </div>
 
-      <MobileMenu
-        isOpen={isOpen}
-        toggleMenu={toggleMenu}
-        handleLogOut={handleLogOut}
-      />
+      <div className={styles.mobileMenuWrapper}>
+        <MobileMenu
+          isOpen={isOpen}
+          toggleMenu={toggleMenu}
+          handleLogOut={handleLogOut}
+        />
+      </div>
     </header>
   );
 };

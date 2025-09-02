@@ -1,0 +1,138 @@
+/* Header satırı: flex justify-between mb-[22px] md:mb-[20px] */
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+@media (min-width: 768px) {
+    .headerRow {
+        margin-bottom: 20px;
+    }
+}
+
+/* Loader yüksekliği: h-[248px] md:h-[523px] */
+.loader {
+    height: 248px;
+}
+
+@media (min-width: 768px) {
+    .loader {
+        height: 523px;
+    }
+}
+
+/* Empty state: flex items-center justify-center h-3/4 */
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+}
+
+/* Empty text: text-14 md:text-2xl lg:text-28 text-light-white */
+.emptyText {
+    font-size: 14px;
+    color: var(--light-white, #f8f9fa);
+}
+
+@media (min-width: 768px) {
+    .emptyText {
+        font-size: 24px;
+        /* 2xl */
+    }
+}
+
+@media (min-width: 1024px) {
+    .emptyText {
+        font-size: 28px;
+    }
+}
+
+/* ---- Modal içindeki BookItem override stilleri ---- */
+
+/* item: w-[194px] md:w-[317px] */
+.modalItem {
+    width: 194px;
+}
+
+@media (min-width: 768px) {
+    .modalItem {
+        width: 317px;
+    }
+}
+
+/* img: h-[213px] w-[140px] mb-[16px] mx-auto md:w-[153px] md:h-[233px] */
+.modalImg {
+    height: 213px;
+    width: 140px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .modalImg {
+        width: 153px;
+        height: 233px;
+    }
+}
+
+/* description: mb-[20px] md:mb-[32px] */
+.modalDesc {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .modalDesc {
+        margin-bottom: 32px;
+    }
+}
+
+/* title:
+   text-center mb-[2px] text-18 overflow-visible !whitespace-normal
+   font-gilroy-bold leading-none tracking-[-0.36px]
+   md:text-20 md:tracking-[-0.4px]
+*/
+.modalTitle {
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 18px;
+    overflow: visible;
+    white-space: normal;
+    /* !whitespace-normal karşılığı */
+    font-family: var(--font-gilroy-bold, inherit);
+    font-weight: 700;
+    line-height: 1;
+    /* leading-none */
+    letter-spacing: -0.36px;
+}
+
+@media (min-width: 768px) {
+    .modalTitle {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+}
+
+/* text:
+   text-center mb-[4px] text-grey text-12 leading-[1.17] tracking-[-0.24px]
+   md:text-14 md:leading-[1.29] md:tracking-[-0.28px]
+*/
+.modalText {
+    text-align: center;
+    margin-bottom: 4px;
+    color: var(--grey, #9aa0a6);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.24px;
+}
+
+@media (min-width: 768px) {
+    .modalText {
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.28px;
+    }
+}

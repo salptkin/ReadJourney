@@ -1,0 +1,15 @@
+.list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.iconActive {
+    stroke: var(--light-white, #f8f9fa);
+    color: var(--light-white, #f8f9fa);
+}
+
+.iconDisabled {
+    stroke: var(--grey-20, rgba(255, 255, 255, 0.2));
+    color: var(--grey-20, rgba(255, 255, 255, 0.2));
+}

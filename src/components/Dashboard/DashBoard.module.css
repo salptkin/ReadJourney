@@ -1,0 +1,27 @@
+.dashboard {
+    padding: 20px;
+    border-radius: 30px;
+    background: var(--light-dark, #1F1F1F);
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .dashboard {
+        margin-bottom: 16px;
+        padding: 32px;
+        display: flex;
+        gap: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard {
+        margin-bottom: 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

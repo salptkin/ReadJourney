@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import styles from "./PageLayout.module.css";
 
-const Layout = () => {
+const PageLayout = () => {
   return (
     <div className={styles.container}>
       <Header />
@@ -13,4 +13,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default PageLayout;

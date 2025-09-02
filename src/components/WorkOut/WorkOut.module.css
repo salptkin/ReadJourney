@@ -1,0 +1,125 @@
+.wrapper {
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--dark-grey, #262626);
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 313px;
+        padding-right: 40px;
+    }
+}
+
+.title {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -0.36px;
+    font-family: var(--font-gilroy-bold, inherit);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        margin-bottom: 40px;
+    }
+}
+
+.list {
+    margin-bottom: 14px;
+    list-style-type: none;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .list {
+        margin-bottom: 20px;
+    }
+}
+
+.item {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+    margin-left: 52px;
+}
+
+.itemFirst {
+    margin-bottom: 20px;
+    max-width: 193px;
+}
+
+@media (min-width: 768px) {
+    .two {
+        max-width: 197px;
+    }
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -52px;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: var(--light-white, #f8f9fa);
+    color: var(--light-dark, #121417);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -0.36px;
+    font-family: var(--font-gilroy-bold, inherit);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .item::before {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        left: -56px;
+    }
+}
+
+.one::before {
+    content: "1";
+}
+
+.two::before {
+    content: "2";
+}
+
+.muted {
+    color: var(--grey, #9aa0a6);
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+    color: var(--grey, #9aa0a6);
+    text-decoration: underline;
+    transition: color 350ms ease;
+}
+
+.link:hover {
+    color: currentColor;
+}
+
+.icon {
+    stroke: var(--light-white, #f8f9fa);
+    color: var(--light-white, #f8f9fa);
+}

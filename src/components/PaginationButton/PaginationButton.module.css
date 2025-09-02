@@ -1,0 +1,27 @@
+.btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--grey-20, rgba(255, 255, 255, 0.2));
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.icon {
+    fill: transparent;
+}
+
+@media (min-width: 768px) {
+    .icon {
+        width: 20px;
+        height: 40px;
+    }
+}
