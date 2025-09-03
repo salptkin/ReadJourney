@@ -8,6 +8,7 @@ import { BtnType } from "../../helpers/pagination";
 import BookFilterForm from "../../components/BookFilterForm/BookFilterForm";
 import BookPagination from "../../components/BookPagination/BookPagination";
 import Dashboard from "../../components/Dashboard/DashBoard";
+import QuoteArea from "../../components/QuoteArea/QuoteArea";
 import Workout from "../../components/WorkOut/WorkOut";
 import useWindowSize from "../../customhooks/useWindowSize";
 import Loader from "../../components/Loader/Loader";
@@ -69,7 +70,7 @@ const HomePage = () => {
       <Dashboard>
         <BookFilterForm handleFilter={handleFilter} />
         <Workout />
-        
+        <QuoteArea />
       </Dashboard>
 
       {/* Global "section" ve "title" sınıflarını korudum; yanında module.css ekledim */}

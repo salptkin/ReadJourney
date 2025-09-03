@@ -1,0 +1,36 @@
+.wrapper {
+    display: none;
+    align-items: center;
+    gap: 14px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: var(--dark-grey, #262626);
+    border-radius: 12px;
+    width: 333px;
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        display: flex;
+    }
+}
+
+.emoji {
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.8px;
+    text-align: center;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+    color: var(--grey, #9aa0a6);
+}
+
+.highlight {
+    color: var(--light-white, #f8f9fa);
+}
