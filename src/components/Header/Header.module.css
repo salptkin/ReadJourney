@@ -1,17 +1,17 @@
 .header {
-    padding: 11px 20px;
-    margin-bottom: 10px;
     background-color: #1f1f1f;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 11px 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
     .header {
-        padding: 17px 24px;
-        margin-bottom: 16px;
+        padding: 17px 16px;
         justify-content: space-between;
         gap: 20px;
     }
@@ -19,9 +19,9 @@
 
 @media (min-width: 1024px) {
     .header {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 17px 16px;
         gap: 40px;
+        justify-content: space-between;
     }
 }
 
@@ -30,6 +30,8 @@
         display: flex;
         align-items: center;
         gap: 4px;
+        flex: 1;
+        justify-content: flex-start;
     }
 }
 
@@ -68,12 +70,16 @@
     align-items: center;
     gap: 10px;
     margin-left: auto;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
     .actions {
         gap: 16px;
         margin-left: 0;
+        flex: 1;
+        justify-content: flex-end;
     }
 }
 

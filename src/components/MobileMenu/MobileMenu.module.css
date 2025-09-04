@@ -73,7 +73,6 @@
   letter-spacing: 0.32px !important;
 }
 
-/* Desktop'da gizle */
 @media (min-width: 768px) {
   .overlay {
     display: none !important;

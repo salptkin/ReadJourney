@@ -66,37 +66,41 @@ const HomePage = () => {
   };
 
   return (
-    <>
-      <Dashboard>
-        <BookFilterForm handleFilter={handleFilter} />
-        <Workout />
-        <QuoteArea />
-      </Dashboard>
+    <div className={styles.homePageContainer}>
+      <div className={styles.contentWrapper}>
+        <Dashboard>
+          <BookFilterForm handleFilter={handleFilter} />
+          <Workout />
+          <QuoteArea />
+        </Dashboard>
 
-      {/* Global "section" ve "title" sınıflarını korudum; yanında module.css ekledim */}
-      <section className="section">
-        <div className={styles.headerRow}>
-          <h1 className="title">Recommended</h1>
+        {/* Global "section" ve "title" sınıflarını korudum; yanında module.css ekledim */}
+        <section className="section">
+          {isFetching ? (
+            <Loader className={styles.loader} />
+          ) : data && data.results.length > 0 ? (
+            <>
+              <div className={styles.headerRow}>
+                <h1 className="title">Recommended</h1>
 
-          {data && (
-            <BookPagination
-              page={page}
-              handlePage={handlePage}
-              totalPages={data?.totalPages}
-            />
+                {data && (
+                  <BookPagination
+                    page={page}
+                    handlePage={handlePage}
+                    totalPages={data?.totalPages}
+                  />
+                )}
+              </div>
+              <BookList books={data} handleModal={handleModal} />
+            </>
+          ) : (
+            <div className={styles.empty}>
+              <h1 className={styles.emptyTitle}>Recommended</h1>
+              <p className={styles.emptyText}>No books found for your request 😓</p>
+            </div>
           )}
-        </div>
-
-        {isFetching ? (
-          <Loader className={styles.loader} />
-        ) : data && data.results.length > 0 ? (
-          <BookList books={data} handleModal={handleModal} />
-        ) : (
-          <div className={styles.empty}>
-            <p className={styles.emptyText}>No books found for your request 😓</p>
-          </div>
-        )}
-      </section>
+        </section>
+      </div>
 
       {isOpen && modalName === "recommendedBook" && modalData && (
         <Modal handleModal={handleModal}>
@@ -114,7 +118,7 @@ const HomePage = () => {
           />
         </Modal>
       )}
-    </>
+    </div>
   );
 };
 

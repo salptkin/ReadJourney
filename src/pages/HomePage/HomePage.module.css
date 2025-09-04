@@ -1,4 +1,54 @@
-/* Header satırı: flex justify-between mb-[22px] md:mb-[20px] */
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .homePageContainer {
+        padding: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .homePageContainer {
+        flex-direction: row;
+        gap: 24px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.contentWrapper {
+    width: 100%;
+    max-width: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+
+@media (min-width: 768px) {
+    .contentWrapper {
+        max-width: 704px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contentWrapper {
+        max-width: 1216px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
 .headerRow {
     display: flex;
     justify-content: space-between;
@@ -11,7 +61,6 @@
     }
 }
 
-/* Loader yüksekliği: h-[248px] md:h-[523px] */
 .loader {
     height: 248px;
 }
@@ -22,24 +71,70 @@
     }
 }
 
-/* Empty state: flex items-center justify-center h-3/4 */
 .empty {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 75%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 280px;
+    height: 382px;
+    background-color: #1F1F1F;
+    border-radius: 15px;
+    position: relative;
 }
 
-/* Empty text: text-14 md:text-2xl lg:text-28 text-light-white */
+@media (min-width: 425px) {
+    .empty {
+        width: 335px;
+    }
+}
+
+.emptyTitle {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+    .emptyTitle {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .empty {
+        width: 704px;
+        height: 663px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .empty {
+        width: 790px;
+        flex: 1 1 auto;
+        min-width: 0;
+        height: 715px;
+        margin-top: 0;
+    }
+}
+
 .emptyText {
     font-size: 14px;
     color: var(--light-white, #f8f9fa);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     .emptyText {
         font-size: 24px;
-        /* 2xl */
     }
 }
 
@@ -49,9 +144,6 @@
     }
 }
 
-/* ---- Modal içindeki BookItem override stilleri ---- */
-
-/* item: w-[194px] md:w-[317px] */
 .modalItem {
     width: 194px;
 }
@@ -62,7 +154,6 @@
     }
 }
 
-/* img: h-[213px] w-[140px] mb-[16px] mx-auto md:w-[153px] md:h-[233px] */
 .modalImg {
     height: 213px;
     width: 140px;
@@ -79,7 +170,6 @@
     }
 }
 
-/* description: mb-[20px] md:mb-[32px] */
 .modalDesc {
     margin-bottom: 20px;
 }
@@ -90,22 +180,15 @@
     }
 }
 
-/* title:
-   text-center mb-[2px] text-18 overflow-visible !whitespace-normal
-   font-gilroy-bold leading-none tracking-[-0.36px]
-   md:text-20 md:tracking-[-0.4px]
-*/
 .modalTitle {
     text-align: center;
     margin-bottom: 2px;
     font-size: 18px;
     overflow: visible;
     white-space: normal;
-    /* !whitespace-normal karşılığı */
     font-family: var(--font-gilroy-bold, inherit);
     font-weight: 700;
     line-height: 1;
-    /* leading-none */
     letter-spacing: -0.36px;
 }
 
@@ -116,10 +199,6 @@
     }
 }
 
-/* text:
-   text-center mb-[4px] text-grey text-12 leading-[1.17] tracking-[-0.24px]
-   md:text-14 md:leading-[1.29] md:tracking-[-0.28px]
-*/
 .modalText {
     text-align: center;
     margin-bottom: 4px;

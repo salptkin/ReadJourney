@@ -5,10 +5,14 @@ import styles from "./PageLayout.module.css";
 const PageLayout = () => {
   return (
     <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <Outlet />
-      </main>
+      <div className={styles.headerWrapper}>
+        <Header />
+      </div>
+      <div className={styles.mainWrapper}>
+        <main className={styles.main}>
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };
