@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useGetRecommendedBooksQuery } from "../../store/book/bookSlice";
 import { useAppDispatch, useAppSelector } from "../../customhooks/useRedux";
 import { selectModal } from "../../store/modal/modalSelector";
-import { toggleModal } from "../../store/modal/modalSlice";
+import { openModal, closeModal } from "../../store/modal/modalSlice";
 import { BtnType } from "../../helpers/pagination";
 
 import BookFilterForm from "../../components/BookFilterForm/BookFilterForm";
@@ -39,13 +39,25 @@ const HomePage = () => {
   });
 
   useEffect(() => {
-    if (width < 768) {
-      setLimit(2);
-    } else if (width > 768 && width < 1439) {
-      setLimit(8);
-    } else {
-      setLimit(10);
-    }
+    const updateLimit = () => {
+      if (width < 768) {
+        setLimit(2);
+      } else if (width >= 768 && width < 1439) {
+        setLimit(8);
+      } else {
+        setLimit(10);
+      }
+    };
+    
+    updateLimit();
+    
+    // DevTools için ek kontrol
+    const handleResize = () => {
+      setTimeout(updateLimit, 100);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [width]);
 
   const handlePage = (type) => {
@@ -62,8 +74,13 @@ const HomePage = () => {
   };
 
   const handleModal = (data) => {
-    setModalData(data ?? null);
-    dispatch(toggleModal("recommendedBook"));
+    if (data) {
+      setModalData(data);
+      dispatch(openModal("recommendedBook"));
+    } else {
+      dispatch(closeModal());
+      setModalData(null);
+    }
   };
 
   return (

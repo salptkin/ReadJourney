@@ -28,7 +28,8 @@ const BookItem = ({
 
   const openModal = () => {
     if (handleModal) {
-      handleModal({ _id, title, totalPages, imageUrl, author });
+      const bookData = { _id, title, totalPages, imageUrl, author };
+      handleModal(bookData);
     }
   };
 

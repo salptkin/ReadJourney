@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Icon from "../GeneralUse/Icon/Icon";
 import styles from "./Modal.module.css";
 
-const modalRoot = document.getElementById("modal-root");
+const modalRoot = document.getElementById("modal");
 
 const Modal = ({ handleModal, children, className }) => {
   useEffect(() => {
@@ -33,7 +33,7 @@ const Modal = ({ handleModal, children, className }) => {
         <button
           type="button"
           className={styles.closeButton}
-          onClick={handleModal}
+          onClick={() => handleModal()}
           aria-label="Close modal"
         >
           <Icon className={styles.icon} w={22} iconName="icon-close-menu" />
