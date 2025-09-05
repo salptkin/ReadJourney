@@ -3,7 +3,6 @@
     border-radius: 15px;
     background: var(--light-dark, #1F1F1F);
     margin-bottom: 10px;
-    height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -24,5 +23,8 @@
         padding-right: 20px;
         flex-direction: column;
         gap: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }

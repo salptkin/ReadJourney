@@ -16,12 +16,21 @@
 }
 
 .icon {
-    fill: transparent;
+    width: 8px;
+    height: 12px;
+    display: block;
 }
 
 @media (min-width: 768px) {
     .icon {
-        width: 20px;
-        height: 40px;
+        width: 10px;
+        height: 15px;
+    }
+}
+
+@media (min-width: 320px) {
+    .icon {
+        width: 8px;
+        height: 12px;
     }
 }

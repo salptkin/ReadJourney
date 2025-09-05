@@ -44,7 +44,7 @@
         max-width: 1216px;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 16px;
     }
 }
@@ -52,7 +52,37 @@
 .headerRow {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 22px;
+}
+
+/* Recommended section container - sadece background color için */
+.recommendedSection {
+    background-color: var(--dark-grey, #1f1f1f);
+    border-radius: 15px;
+    padding: 40px;
+    box-sizing: border-box;
+    height: 651px;
+    min-height: 651px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .recommendedSection {
+        height: 300px;
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .recommendedSection {
+        height: 705px;
+        min-height: 705px;
+        padding: 24px;
+    }
+
+    .headerRow {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media (min-width: 768px) {
@@ -61,13 +91,35 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+    .headerRow {
+        padding: 0;
+    }
+
+    .recommendedSection {
+        height: 382px;
+    }
+}
+
 .loader {
     height: 248px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
     .loader {
         height: 523px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .recommendedSection {
+        height: 100%;
+        min-height: 100%;
     }
 }
 
@@ -76,48 +128,23 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 280px;
+    width: 100%;
     height: 382px;
-    background-color: #1F1F1F;
-    border-radius: 15px;
     position: relative;
-}
-
-@media (min-width: 425px) {
-    .empty {
-        width: 335px;
-    }
 }
 
 .emptyTitle {
     font-size: 20px;
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 0;
 }
 
 @media (min-width: 768px) {
     .emptyTitle {
         font-size: 28px;
         margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 0;
         margin-bottom: 0;
-    }
-}
-
-@media (min-width: 768px) {
-    .empty {
-        width: 704px;
-        height: 663px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .empty {
-        width: 790px;
-        flex: 1 1 auto;
-        min-width: 0;
-        height: 715px;
-        margin-top: 0;
     }
 }
 

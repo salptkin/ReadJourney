@@ -30,7 +30,8 @@ const HomePage = () => {
   const dispatch = useAppDispatch();
   const { width } = useWindowSize();
   const { isOpen, modalName } = useAppSelector(selectModal);
-  const { data, isFetching } = useGetRecommendedBooksQuery({
+  
+  const { data, isFetching, error, isLoading } = useGetRecommendedBooksQuery({
     limit,
     page,
     title: filter.title,
@@ -74,11 +75,21 @@ const HomePage = () => {
           <QuoteArea />
         </Dashboard>
 
-        {/* Global "section" ve "title" sınıflarını korudum; yanında module.css ekledim */}
-        <section className="section">
-          {isFetching ? (
+        {/* Recommended section with consistent background */}
+        <div className={styles.recommendedSection}>
+          {isFetching || isLoading ? (
             <Loader className={styles.loader} />
-          ) : data && data.results.length > 0 ? (
+          ) : error ? (
+            <div className={styles.empty}>
+              <h1 className={styles.emptyTitle}>Recommended</h1>
+              <p className={styles.emptyText}>
+                Error loading books: {error?.data?.message || error?.message || 'Unknown error'}
+              </p>
+              <p className={styles.emptyText}>
+                Status: {error?.status}
+              </p>
+            </div>
+          ) : data && data.results && data.results.length > 0 ? (
             <>
               <div className={styles.headerRow}>
                 <h1 className="title">Recommended</h1>
@@ -97,9 +108,14 @@ const HomePage = () => {
             <div className={styles.empty}>
               <h1 className={styles.emptyTitle}>Recommended</h1>
               <p className={styles.emptyText}>No books found for your request 😓</p>
+              {data && (
+                <p className={styles.emptyText}>
+                  Debug: Data exists but no results. Data: {JSON.stringify(data)}
+                </p>
+              )}
             </div>
           )}
-        </section>
+        </div>
       </div>
 
       {isOpen && modalName === "recommendedBook" && modalData && (

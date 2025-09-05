@@ -1,8 +1,16 @@
 import clsx from "clsx";
-import Icon from "../GeneralUse/Icon/Icon";
 import styles from "./PaginationButton.module.css";
 
 const PaginationButton = ({ disabled, onClick, iconName, className }) => {
+  const getIconPath = () => {
+    if (iconName === "icon-next") {
+      return "/images/listnext.svg";
+    } else if (iconName === "icon-prev") {
+      return "/images/listprew.svg";
+    }
+    return null;
+  };
+
   return (
     <button
       type="button"
@@ -11,10 +19,10 @@ const PaginationButton = ({ disabled, onClick, iconName, className }) => {
       onClick={onClick}
       aria-disabled={disabled}
     >
-      <Icon
+      <img
+        src={getIconPath()}
+        alt={iconName}
         className={clsx(styles.icon, className)}
-        w={16}
-        iconName={iconName}
       />
     </button>
   );

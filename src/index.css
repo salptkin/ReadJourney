@@ -42,9 +42,13 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  margin-left: 40px;
+  margin: 0;
 }
-
+@media (min-width: 320px) {
+  h1 {
+    font-size: 20px;
+  }
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
