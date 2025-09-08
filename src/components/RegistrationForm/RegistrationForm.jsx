@@ -33,7 +33,6 @@ const RegistrationForm = () => {
             const result = await dispatch(registerThunk({ name, email, password })).unwrap();
             toast.success("Registration successful! Welcome to ReadJourney!");
             resetForm();
-            // Başarılı kayıt sonrası login sayfasına yönlendir
             setTimeout(() => {
               navigate("/login");
             }, 1500);

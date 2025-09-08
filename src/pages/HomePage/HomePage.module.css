@@ -65,10 +65,18 @@
     width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .recommendedSection {
         height: 300px;
         min-height: 300px;
+        width: 375px;
+        max-width: 375px;
+    }
+    
+    /* Center books in HomePage recommended section */
+    .recommendedSection :global(.list) {
+        justify-content: center !important;
+        padding-left: 0 !important;
     }
 }
 
@@ -77,6 +85,8 @@
         height: 705px;
         min-height: 705px;
         padding: 24px;
+        width: 704px;
+        max-width: 704px;
     }
 
     .headerRow {

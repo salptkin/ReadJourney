@@ -1,11 +1,18 @@
 .btn {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border: 1px solid var(--grey-20, rgba(255, 255, 255, 0.2));
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 375px) {
+    .btn {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -16,8 +23,8 @@
 }
 
 .icon {
-    width: 8px;
-    height: 12px;
+    width: 6px;
+    height: 10px;
     display: block;
 }
 
@@ -25,12 +32,5 @@
     .icon {
         width: 10px;
         height: 15px;
-    }
-}
-
-@media (min-width: 320px) {
-    .icon {
-        width: 8px;
-        height: 12px;
     }
 }

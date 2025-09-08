@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { Toaster } from "react-hot-toast";
 import { refreshUser } from "./store/auth/authOperations";
 
 import PageLayout from "./PageLayout/PageLayout";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import HomePage from "./pages/HomePage/HomePage"
+import LibraryPage from "./pages/LibraryPage/LibraryPage";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 
@@ -19,6 +21,7 @@ const App = () => {
 
   return (
     <>
+      <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<PageLayout />}>
           <Route
@@ -26,6 +29,14 @@ const App = () => {
             element={
               <PrivateRoute>
                 <HomePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/library"
+            element={
+              <PrivateRoute>
+                <LibraryPage />
               </PrivateRoute>
             }
           />

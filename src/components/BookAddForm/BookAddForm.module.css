@@ -1,0 +1,103 @@
+.form {
+    margin-bottom: 20px;
+    flex: 1 1 auto;
+}
+
+@media (max-width: 375px) {
+    .form {
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form {
+        margin-bottom: 0;
+        width: 295px;
+        flex: 0 0 295px;
+        max-width: 295px;
+    }
+}
+
+.helper {
+    margin-bottom: 8px;
+    margin-left: 14px;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+@media (min-width: 768px) {
+    .helper {
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.28px;
+    }
+}
+
+.titleInput {
+    padding-left: 77px;
+    padding-right: 14px;
+}
+
+@media (min-width: 768px) {
+    .titleInput {
+        padding-left: 86px;
+    }
+}
+
+.titleWrapper {
+    margin-bottom: 8px;
+}
+
+.authorInput {
+    padding-left: 85px;
+    padding-right: 14px;
+}
+
+@media (min-width: 768px) {
+    .authorInput {
+        padding-left: 95px;
+    }
+}
+
+.authorWrapper {
+    margin-bottom: 8px;
+}
+
+.pagesInput {
+    padding-left: 119px;
+    padding-right: 14px;
+}
+
+@media (min-width: 768px) {
+    .pagesInput {
+        padding-left: 135px;
+    }
+}
+
+.pagesWrapper {
+    margin-bottom: 20px;
+}
+
+.submitBtn {
+    height: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+    .submitBtn {
+        height: 42px;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-size: 16px;
+        line-height: 1.13;
+        letter-spacing: 0.32px;
+    }
+}

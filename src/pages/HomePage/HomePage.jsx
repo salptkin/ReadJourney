@@ -51,7 +51,6 @@ const HomePage = () => {
     
     updateLimit();
     
-    // DevTools için ek kontrol
     const handleResize = () => {
       setTimeout(updateLimit, 100);
     };

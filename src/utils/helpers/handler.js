@@ -1,4 +1,3 @@
-// helpers/handlers.js
 import axios from "axios";
 
 export const handleFulfilled = (state) => {

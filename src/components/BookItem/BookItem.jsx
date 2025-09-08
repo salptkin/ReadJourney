@@ -37,7 +37,7 @@ const BookItem = ({
 
   return (
     <li className={clsx(styles.item, className?.item)}>
-      {imageUrl ? (
+      {imageUrl && imageUrl.trim() ? (
         <img
           src={imageUrl}
           alt={title}
@@ -48,13 +48,16 @@ const BookItem = ({
         />
       ) : (
         <div className={styles.placeholder} onClick={openModal}>
-          <img
-            src="/images/book.png"
-            alt=""
+          <svg 
             className={styles.placeholderImg}
-            width={137}
-            height={90}
-          />
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2"
+          >
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
         </div>
       )}
 
@@ -83,7 +86,11 @@ const BookItem = ({
             className={styles.deleteBtn}
             aria-label="Remove from library"
           >
-            <Icon className={styles.iconTrash} w={14} iconName="icon-trash" />
+            <img 
+              src="/images/trashicon.svg" 
+              alt="Delete" 
+              className={styles.iconTrash}
+            />
           </button>
         )}
       </div>
@@ -103,14 +110,21 @@ const BookItem = ({
               (async () => {
                 try {
                   await addBook(_id).unwrap();
-                  toast.success(
-                    "The book has been successfully added to your library!"
-                  );
+                  toast.success("The book has already been added to your library!", {
+                    style: {
+                      background: '#262626',
+                      color: 'white',
+                    },
+                  });
+                  if (handleModal) handleModal();
                 // eslint-disable-next-line no-unused-vars
                 } catch (e) {
-                  toast.error(
-                    "The book has already been added to your library!"
-                  );
+                  toast.error("The book has already been added to your library!", {
+                    style: {
+                      background: '#262626',
+                      color: 'white',
+                    },
+                  });
                 }
               })();
             }
