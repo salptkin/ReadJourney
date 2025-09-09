@@ -1,0 +1,22 @@
+.wrapper {
+    width: 116px;
+    height: 116px;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 120px;
+        height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        width: 150px;
+        height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+}

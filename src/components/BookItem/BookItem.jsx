@@ -19,6 +19,8 @@ const BookItem = ({
   className = {},
   handleModal,
   isButton,
+  isOwn = false,
+  isLoadingOwnBooks = false,
 }) => {
   const [addBook, { isLoading }] = useAddBookToLibraryMutation();
   const [removeBook] = useRemoveBookFromLibraryMutation();
@@ -106,25 +108,16 @@ const BookItem = ({
             if (pathname === "/library") {
               navigate("/reading", { state: { bookId: _id } });
               if (handleModal) handleModal();
+            } else if (isOwn) {
+              toast.error("This book is already in your library!");
             } else {
               (async () => {
                 try {
                   await addBook(_id).unwrap();
-                  toast.success("The book has already been added to your library!", {
-                    style: {
-                      background: '#262626',
-                      color: 'white',
-                    },
-                  });
+                  toast.success("Book added to your library successfully!");
                   if (handleModal) handleModal();
-                // eslint-disable-next-line no-unused-vars
                 } catch (e) {
-                  toast.error("The book has already been added to your library!", {
-                    style: {
-                      background: '#262626',
-                      color: 'white',
-                    },
-                  });
+                  toast.error("This book is already in your library!");
                 }
               })();
             }

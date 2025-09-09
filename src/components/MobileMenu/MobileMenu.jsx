@@ -49,7 +49,7 @@ const MobileMenu = ({ isOpen, toggleMenu, handleLogOut }) => {
         </button>
 
         <div className={styles.navWrap}>
-          <Navigation />
+          <Navigation onLinkClick={toggleMenu} />
         </div>
 
         <Button

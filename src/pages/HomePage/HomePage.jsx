@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useGetRecommendedBooksQuery } from "../../store/book/bookSlice";
+import { useGetRecommendedBooksQuery, useGetOwnBooksQuery } from "../../store/book/bookSlice";
 import { useAppDispatch, useAppSelector } from "../../customhooks/useRedux";
 import { selectModal } from "../../store/modal/modalSelector";
 import { openModal, closeModal } from "../../store/modal/modalSlice";
@@ -37,6 +37,8 @@ const HomePage = () => {
     title: filter.title,
     author: filter.author,
   });
+
+  const { data: ownBooks, isLoading: ownBooksLoading } = useGetOwnBooksQuery({ status: "" });
 
   useEffect(() => {
     const updateLimit = () => {
@@ -139,6 +141,14 @@ const HomePage = () => {
           <BookItem
             isModal={true}
             handleModal={handleModal}
+            isOwn={(() => {
+              // Eğer ownBooks verisi henüz yüklenmemişse, güvenli tarafta kal ve true döndür
+              if (!ownBooks?.data) {
+                return true;
+              }
+              return ownBooks.data.some(book => book._id === modalData._id);
+            })()}
+            isLoadingOwnBooks={ownBooksLoading}
             className={{
               item: styles.modalItem,
               img: styles.modalImg,
