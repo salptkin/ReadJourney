@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import clsx from "clsx";
 import Icon from "../GeneralUse/Icon/Icon";
 import workoutSteps from "../../utils/data/workout";
-import styles from "./Workout.module.css";
+import styles from "./WorkOut.module.css";
 
 const Workout = () => {
   return (
