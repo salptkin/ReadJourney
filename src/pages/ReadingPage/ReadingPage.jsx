@@ -14,7 +14,7 @@ import clsx from "clsx";
 import toast from "react-hot-toast";
 import ReadingForm from "../../components/ReadingForm/ReadingForm";
 import BookItem from "../../components/BookItem/BookItem";
-import Dashboard from "../../components/Dashboard/DashBoard";
+import Dashboard from "../../components/Dashboard/Dashboard";
 import ProgressContent from "../../components/ProgressContent/ProgressContent";
 import Statistics from "../../components/Statistics/Statistics";
 import Diary from "../../components/Diary/Diary";

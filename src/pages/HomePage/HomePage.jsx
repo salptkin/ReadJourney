@@ -7,7 +7,7 @@ import { BtnType } from "../../helpers/pagination";
 
 import BookFilterForm from "../../components/BookFilterForm/BookFilterForm";
 import BookPagination from "../../components/BookPagination/BookPagination";
-import Dashboard from "../../components/Dashboard/DashBoard";
+import Dashboard from "../../components/Dashboard/Dashboard";
 import QuoteArea from "../../components/QuoteArea/QuoteArea";
 import Workout from "../../components/WorkOut/WorkOut";
 import useWindowSize from "../../customhooks/useWindowSize";

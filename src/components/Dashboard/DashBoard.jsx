@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./DashBoard.module.css";
+import styles from "./Dashboard.module.css";
 
 const Dashboard = ({ children, className }) => {
   return (

@@ -15,7 +15,7 @@ import selectData from "../../utils/data/selectData";
 import BookAddForm from "../../components/BookAddForm/BookAddForm";
 import BookItem from "../../components/BookItem/BookItem";
 import BookList from "../../components/BookList/BookList";
-import Dashboard from "../../components/Dashboard/DashBoard";
+import Dashboard from "../../components/Dashboard/Dashboard";
 import Modal from "../../components/Modal/Modal";
 import EmptyLibrary from "../../components/EmptyLibrary/EmptyLibrary";
 import Recommendations from "../../components/RecommendedBooks/RecommendedBooks";
