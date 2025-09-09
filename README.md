@@ -37,7 +37,7 @@
 2. Proje dizinine gidin:
 
    ```bash
-   cd read
+   cd readjourney
    ```
 
 3. Bağımlılıkları yükleyin:
