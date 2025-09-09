@@ -108,6 +108,8 @@ const BookItem = ({
             if (pathname === "/library") {
               navigate("/reading", { state: { bookId: _id } });
               if (handleModal) handleModal();
+            } else if (isLoadingOwnBooks) {
+              toast.error("Please wait, checking your library...");
             } else if (isOwn) {
               toast.error("This book is already in your library!");
             } else {

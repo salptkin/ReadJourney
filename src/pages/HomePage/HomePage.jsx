@@ -142,11 +142,14 @@ const HomePage = () => {
             isModal={true}
             handleModal={handleModal}
             isOwn={(() => {
-              // Eğer ownBooks verisi henüz yüklenmemişse, güvenli tarafta kal ve true döndür
-              if (!ownBooks?.data) {
+              // Eğer ownBooks verisi henüz yüklenmemişse, true döndür (güvenli tarafta kal)
+              if (!ownBooks && !ownBooksLoading) {
                 return true;
               }
-              return ownBooks.data.some(book => book._id === modalData._id);
+              if (!ownBooks) {
+                return true;
+              }
+              return ownBooks.some(book => book._id === modalData._id);
             })()}
             isLoadingOwnBooks={ownBooksLoading}
             className={{
