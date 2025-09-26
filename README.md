@@ -2,7 +2,7 @@
 
 **Read Journey**, kullanıcılara kişiselleştirilmiş bir okuma deneyimi sunan interaktif bir web uygulamasıdır. Kullanıcılar üye olabilir, önerilen kitapları keşfedebilir, başlık veya yazara göre filtreleyebilir, kitapları kendi kütüphanelerine ekleyebilir ve okuma ilerlemelerini takip edebilir.
 
-🌐 **Canlı Demo:** _(yakında)_
+🌐 **Canlı Demo:** [read-journey-iota.vercel.app](https://read-journey-iota.vercel.app)
 
 ---
 
