@@ -17,7 +17,7 @@ const RegistrationForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoading, isLoggedIn } = useSelector((state) => state.auth);
+  const { isLoading } = useSelector((state) => state.auth);
 
   const toggleShowPassword = () => setShowPassword((prev) => !prev);
 
@@ -30,7 +30,7 @@ const RegistrationForm = () => {
           if (!name.trim() || !email.trim() || !password.trim()) return;
           
           try {
-            const result = await dispatch(registerThunk({ name, email, password })).unwrap();
+            await dispatch(registerThunk({ name, email, password })).unwrap();
             toast.success("Registration successful! Welcome to ReadJourney!");
             resetForm();
             setTimeout(() => {

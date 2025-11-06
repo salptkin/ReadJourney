@@ -21,6 +21,7 @@ import Diary from "../../components/Diary/Diary";
 import Modal from "../../components/Modal/Modal";
 import ModalAlert from "../../components/ModalAlert/ModalAlert";
 import Icon from "../../components/GeneralUse/Icon/Icon";
+import SEO from "../../components/SEO/SEO";
 
 import styles from "./ReadingPage.module.css";
 
@@ -64,8 +65,22 @@ const ReadingPage = () => {
     bookInfo?.progress.length === 0 ||
     bookInfo?.progress[0]?.status !== "inactive";
 
+  const pageTitle = bookInfo 
+    ? `${bookInfo.title} - Reading Page`
+    : "Reading Page";
+
+  const pageDescription = bookInfo
+    ? `${bookInfo.title} kitabını okuyun ve ilerlemenizi takip edin. İstatistiklerinizi görüntüleyin ve okuma günlüğünüzü tutun.`
+    : "Kitap okuma sayfanızda ilerlemenizi takip edin, istatistiklerinizi görüntüleyin ve okuma günlüğünüzü tutun.";
+
   return (
-    <div className={styles.readingPageContainer}>
+    <>
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        url="https://read-journey-iota.vercel.app/reading"
+      />
+      <div className={styles.readingPageContainer}>
       <div className={styles.contentWrapper}>
         <div className={styles.dashboardContent}>
           <Dashboard
@@ -202,7 +217,8 @@ const ReadingPage = () => {
           />
         </Modal>
       )}
-    </div>
+      </div>
+    </>
   );
 };
 

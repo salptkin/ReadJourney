@@ -22,6 +22,7 @@ import Recommendations from "../../components/RecommendedBooks/RecommendedBooks"
 import LibraryDropDown from "../../components/LibraryDropDown/LibraryDropDown";
 import ModalAlert from "../../components/ModalAlert/ModalAlert";
 import BookPagination from "../../components/BookPagination/BookPagination";
+import SEO from "../../components/SEO/SEO";
 
 import styles from "./LibraryPage.module.css";
 
@@ -86,7 +87,13 @@ const LibraryPage = () => {
   const isEmpty = (ownBooks?.results?.length || ownBooks?.length || 0) === 0;
 
   return (
-    <div className={styles.libraryPageContainer}>
+    <>
+      <SEO
+        title="My Library"
+        description="Read Journey kütüphanenizdeki kitapları görüntüleyin, yönetin ve okuma ilerlemenizi takip edin."
+        url="https://read-journey-iota.vercel.app/library"
+      />
+      <div className={styles.libraryPageContainer}>
       <div className={styles.contentWrapper}>
         <Dashboard className={styles.dashboard}>
           <div className={styles.dashboardContent}>
@@ -160,7 +167,8 @@ const LibraryPage = () => {
           />
         </Modal>
       )}
-    </div>
+      </div>
+    </>
   );
 };
 

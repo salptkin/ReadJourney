@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://read-journey-iota.vercel.app/sitemap.xml
+

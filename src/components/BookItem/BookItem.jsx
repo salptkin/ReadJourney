@@ -118,7 +118,7 @@ const BookItem = ({
                   await addBook(_id).unwrap();
                   toast.success("Book added to your library successfully!");
                   if (handleModal) handleModal();
-                } catch (e) {
+                } catch {
                   toast.error("This book is already in your library!");
                 }
               })();

@@ -24,6 +24,8 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      '@typescript-eslint/naming-convention': 'off',
     },
+    ignores: ['**/node_modules/**', '**/dist/**'],
   },
 ])
