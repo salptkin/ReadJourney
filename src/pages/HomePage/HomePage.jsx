@@ -93,7 +93,6 @@ const HomePage = () => {
           <QuoteArea />
         </Dashboard>
 
-        {/* Recommended section with consistent background */}
         <div className={styles.recommendedSection}>
           {isFetching || isLoading ? (
             <Loader className={styles.loader} />
@@ -126,11 +125,6 @@ const HomePage = () => {
             <div className={styles.empty}>
               <h1 className={styles.emptyTitle}>Recommended</h1>
               <p className={styles.emptyText}>No books found for your request 😓</p>
-              {data && (
-                <p className={styles.emptyText}>
-                  Debug: Data exists but no results. Data: {JSON.stringify(data)}
-                </p>
-              )}
             </div>
           )}
         </div>
@@ -142,7 +136,6 @@ const HomePage = () => {
             isModal={true}
             handleModal={handleModal}
             isOwn={(() => {
-              // Eğer ownBooks verisi henüz yüklenmemişse, true döndür (güvenli tarafta kal)
               if (!ownBooks && !ownBooksLoading) {
                 return true;
               }

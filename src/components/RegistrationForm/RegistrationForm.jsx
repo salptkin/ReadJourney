@@ -49,7 +49,6 @@ const RegistrationForm = () => {
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
         <form onSubmit={handleSubmit} noValidate className={styles.form}>
-          {/* Name */}
           <InputField
             id="name"
             type="text"
@@ -80,7 +79,6 @@ const RegistrationForm = () => {
             ) : null}
           </InputField>
 
-          {/* Email */}
           <InputField
             id="email"
             type="email"
@@ -111,7 +109,6 @@ const RegistrationForm = () => {
             ) : null}
           </InputField>
 
-          {/* Password */}
           <InputField
             id="password"
             type="password"
@@ -145,7 +142,6 @@ const RegistrationForm = () => {
             ) : null}
           </InputField>
 
-          {/* Actions */}
           <div className={styles.actions}>
             <Button
               type="submit"
